@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Tennis World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c5234, #4a7c59);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .tennis-ball {
+            font-size: 4em;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        .facts {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+        }
+        .fact {
+            margin: 15px 0;
+            font-size: 1.2em;
+        }
+        .court {
+            width: 200px;
+            height: 100px;
+            border: 3px solid white;
+            margin: 20px auto;
+            position: relative;
+            border-radius: 5px;
+        }
+        .net {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: white;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <div class="container">
+        <h1>🎾 Welcome to Tennis World! 🎾</h1>
+        <div class="tennis-ball">🎾</div>
+        
+        <div class="facts">
+            <h2>Fun Tennis Facts</h2>
+            <div class="fact">🏆 Tennis was first played in France in the 12th century</div>
+            <div class="fact">⚡ The fastest serve ever recorded was 163.7 mph by Sam Groth</div>
+            <div class="fact">🌟 Wimbledon is the oldest tennis tournament in the world</div>
+            <div class="fact">🎯 A tennis ball can travel over 150 mph during a match</div>
+        </div>
+
+        <div class="court">
+            <div class="net"></div>
+        </div>
+        
+        <p>Game, Set, Match! 🏆</p>
+    </div>
 </body>
 </html>
